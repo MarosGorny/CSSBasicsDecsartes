@@ -1,0 +1,162 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, nav, section, article, footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin-bottom:50px;
+    padding-top: 60px; /* This should be equal to or greater than the height of the fixed navbar */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav#main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100%;
+}
+
+nav#main-nav ul li {
+    margin: 0 10vw; /* Spacing between menu items */
+}
+
+
+nav#main-nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for links */
+nav#main-nav ul li a:hover {
+    background-color: #666;
+}
+
+/* Descendant selector for table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead th {
+    background-color: #333;
+    color: #fff;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Class selector for service articles */
+article.service {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Box model adjustments for the footer */
+
+
+
+
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+/* Fixed top navbar styles */
+nav#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px; /* Adjust height as necessary */
+    z-index: 1000; /* Ensure the navbar is above other items */
+    background-color: #555; /* Give the navbar a distinct background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds shadow for depth */
+}
+
+/* Adjust the main content to provide padding for the fixed navbar */
+main {
+    margin-left: 0;
+    padding: 20px;
+}
+
+/* Typography */
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.75em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Adjustments for link appearance */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific styles for sections */
+#about, #services, #contact {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive table with overflow */
+table {
+    border: 1px solid #ccc;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Using relative and absolute sizes for width and height */
+nav#main-nav ul li a {
+    width: calc(100% - 30px); /* relative size minus padding */
+    height: 40px; /* absolute size */
+}
