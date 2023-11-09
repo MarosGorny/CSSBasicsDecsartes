@@ -1,0 +1,43 @@
+/* Style for contact page */
+#contact {
+    margin-bottom: 20px;
+}
+
+/* Styles for price table */
+.price-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.price-table th,
+.price-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.price-table th {
+    background-color: #134169;
+    color: #fff;
+}
+
+.price-table td {
+    background-color: #fff;
+}
+
+/* Scrollable table container */
+.price-table {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+
+
+/* Ensuring the address element is not too wide */
+address {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+}

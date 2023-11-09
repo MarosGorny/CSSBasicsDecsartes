@@ -2,9 +2,9 @@
     background-color: #f8f8f8; /* Light gray background */
     padding: 40px; /* More padding for a spacious feel */
     margin: 20px auto; /* Center it with automatic horizontal margins */
-    max-width: 80vw; /* Max width so lines are not too long on large screens */
+    max-width: 85vw; /* Max width so lines are not too long on large screens */
     border-radius: 4px; /* Slightly rounded corners */
-    font-size: 1.1rem; /* Slightly larger font size for readability */
+    font-size: 110%; /* Slightly larger font size for readability */
 }
 
 #about h2 {
