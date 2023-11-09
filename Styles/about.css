@@ -8,10 +8,10 @@
 }
 
 #about h2 {
-    color: #333; /* Darker color for the heading */
+    color: #134169; 
     margin-bottom: 20px; /* Add more space below the heading */
     padding-bottom: 10px; /* Padding to the bottom of the heading */
-    border-bottom: 2px solid #009688; /* A colored bottom border to the title for emphasis */
+    border-bottom: 2px solid#1F8DC8; /* A colored bottom border to the title for emphasis */
 }
 
 #about p {
@@ -21,11 +21,11 @@
 }
 
 #team h2 {
-    color: #333; /* Dark color for the heading */
+    color: #134169; 
     margin-top: 40px; /* Add more space on the top to separate from the previous content */
     margin-bottom: 20px; /* Space below the heading */
     padding-bottom: 5px; /* Less padding than the About section to differentiate */
-    border-bottom: 3px solid #e91e63; /* A vibrant colored bottom border for visual interest */
+    border-bottom: 3px solid #1F8DC8; /* A vibrant colored bottom border for visual interest */
     text-transform: uppercase; /* Capitalize all letters for distinction */
     font-weight: 600; /* Slightly bolder than normal */
     text-align: center; /* Center the heading to work with the layout */
@@ -47,7 +47,7 @@
     background-color: #fff;
     border-radius: 8px;
     width: 20vw; /* Three items per row */
-    height: 50vh;
+    height: auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
