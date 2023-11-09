@@ -1,0 +1,109 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, nav, section, article, footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 60px; /* As we have a fixed navbar */
+    padding-bottom: 50px;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-image: url("../Images/descartes_header.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-color: #050318;
+    color: #fff;
+    text-align: center;
+    background-size: contain;
+    padding: 1rem 0;
+}
+
+nav#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #555;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav#main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+nav#main-nav ul li {
+    margin: 0 10vw;
+}
+
+nav#main-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav#main-nav ul li a:hover {
+    background-color: #666;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../Images/descartes_footer.png") ;
+    background-color: #050318;
+    background-size: auto;
+    background-position: right;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.75em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Shared section styles */
+#about, #services, #contact {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
