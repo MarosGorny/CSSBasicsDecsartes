@@ -1,0 +1,42 @@
+body, h1, h2, h3, p, ul, li, nav, section, article, footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body element styling to set font, line spacing, color scheme, and background */
+body {
+    font-family: 'Arial', sans-serif; /* Sets the font across the whole page */
+}
+
+/* Default styling for all h2 elements */
+h2 {
+    color: #134169; /* Text color for h2 elements */
+    font-weight: 600; /* Weight of the font, slightly bolder than normal */
+    border-bottom: 2px solid #1F8DC8; /* Border under the heading for emphasis */
+    text-transform: uppercase; /* Transforms all text to uppercase for styling */
+}
+
+h3 {
+    color: #134169; /* Text color for h3 elements */
+    border-bottom: 3px solid #1F8DC8; /* Border under the heading for visual interest */
+    text-transform: uppercase; /* Transforms all text to uppercase for styling */
+    text-align: center; /* Centers the heading text */
+}
+
+/* Paragraph styling within section elements */
+p {
+    text-align: justify; /* Justifies the paragraph text for a clean, aligned look */
+    line-height: 1.8; /* Adjusts the space between lines for readability */
+    color: #555; /* Sets the paragraph text color for readability */
+}
+
+/* Fixed positioning for the footer to make it always visible at the bottom */
+footer {
+    position: fixed; /* Footer is fixed at the bottom of the viewport */
+    bottom: 0; /* Aligns the footer to the bottom */
+    left: 0; /* Aligns the footer to the left */
+    right: 0; /* Aligns the footer to the right */
+    text-align: center; /* Centers the text inside the footer */
+    background-color: #134169; /* Background color of the navigation bar */
+    height: 50px; /* Sets a fixed height for the footer */
+}
