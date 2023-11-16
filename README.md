@@ -1,4 +1,5 @@
-# CSS Workshop | Descartes
+
+# CSS Workshop Outline
 
 ## 1. Implementing CSS
 - **[Inline](https://www.w3schools.com/css/css_howto.asp) CSS**
@@ -8,8 +9,20 @@
   - Change [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) for `<h1>`.
 - **[External](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) CSS File**
   - Remove inline and internal CSS.
-  - Create a **new general** CSS file.
+  - Create a **new general** CSS file in `/Styles` folder.
   - Link this CSS file in HTML.
+ - **Reset Default Styles in general CSS**
+   - Resetting default margins and paddings for common elements to ensure consistency and set default font for text:
+    ```css
+    body, h1, h2, h3, p, ul, li, nav, section, article, footer {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+       font-family: 'Arial', sans-serif; /* Sets the font across the whole page */
+    }
+    ```
 
 ## 2. Styling Elements
 ### 2.1 Edit `<h2>`
@@ -27,7 +40,7 @@
 - [Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) the **"About Us"** CSS file with HTML file.
 
 ## 4. Style for ID Selector "About"
-- Add [`id="about"`](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors#examples) value to a `<section>` element in HTML.
+- Add [`id="about"`](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors#examples) value to the **first** `<section>` element in **"About Us"** HTML.
 - Create "About" ID selector in the **"About Us"** CSS file.
   - Change [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) (recommend LightGrey).
   - Set [`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) of the section to 85vw.
@@ -38,11 +51,12 @@
 - Margin: Center the section; 
   - `margin-top` and `margin-bottom` to 20px.
   -  `margin-left` and `margin-right` to auto.
+  -  [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to 16px.
   - Optional: Use **shorthand** - [`margin: 20px auto`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin).
 - Padding: Set [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding) to 40px for all sides of section.
 - *Remove the red border afterwards.*
 
-## 6. Edit `<h3>`
+## 6. Edit `<h3>` in GENERAL CSS
 - Set [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) and [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align).
 - Edit box model: 
   - Set [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin), [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), and a screen-wide [`border-bottom`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom).
@@ -59,10 +73,17 @@
 - Create a new `<div>` under **"Meet Our Team"** `<h3>` which will contain all team member **divs**.
 - In HTML set an [ID selector](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) for this `<div>`  and add it to the **"About Us"** CSS file.
 - Add these properties to newly created [ID selector](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors)
-  - [``display:  flex;``](https://developer.mozilla.org/en-US/docs/Web/CSS/display) -> Enables [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#the_flex_container) layout
-  - [``flex-wrap:  nowrap; ``](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) -> Doesn't allows items to wrap to new lines 
-  - [``justify-content:  space-around;``](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) -> Distributes space around items
-  - [``align-items:  flex-start; ``](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)  -> Aligns items to the start of the flex container
+  ```css
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: nowrap; /* Doesn't allows items to wrap to new lines*/
+    justify-content: space-around; /* Distributes space around items */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+   ```
+
+  - [``display:  flex``](https://developer.mozilla.org/en-US/docs/Web/CSS/display) 
+  - [``flex-wrap:  nowrap``](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+  - [``justify-content:  space-around``](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+  - [``align-items:  flex-start``](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
 
 ## 8. Style for Team Member Images
 - Create a [descendant *(combinator)* selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) for `img` *(images)* under the `team-member` class.
@@ -73,7 +94,11 @@
 - Create `<footer>` selector in the general CSS file.
 - Set [`position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to fixed.
 - Set [`bottom`](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom), [`left`](https://developer.mozilla.org/en-US/docs/Web/CSS/left), and [`right`](https://developer.mozilla.org/en-US/docs/Web/CSS/right) to 0.
+- Set `background-color` and text `color`.
 - Set [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) to an absolute value (e.g., in pixels).
+  - *Why it's overlapping with `<body>` content?*
+- Set [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) to center
+  - *What's the problem?*  
 - Optional: Add a [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) to the footer.
 
 ## 10. Navigation Bar (Optional, Time-Based) TODO:
@@ -84,7 +109,7 @@
 
 ## 11. Adding Price/Contact Table
 ### 11.1 Contact-Prices CSS File
-- Create a new CSS file for contact-prices HTML file.
+- Create a new CSS file *(`/Styles` folder)* for contact-prices HTML file.
 - Create a new `<div>` around the `<table>` in contact-prices HTML file and assign a [`class="price-table"`](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)selector to that `<div>`.
 
 ### 11.2 Table Styling
