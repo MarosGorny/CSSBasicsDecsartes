@@ -6,7 +6,7 @@
   - Change text [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) for `<h1>` with inline CSS.
 
 - **[Internal](https://www.w3schools.com/css/css_howto.asp) CSS**
-  - Change [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) for `<h1>`.
+  - Change [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) for `<h1>` with internal CSS.
 - **[External](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) CSS File**
   - Remove inline and internal CSS.
   - Create a **new general** CSS file in `/Styles` folder.
