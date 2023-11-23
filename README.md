@@ -9,8 +9,8 @@
   - Change [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) for `<h1>` with internal CSS.
 - **[External](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) CSS File**
   - Remove inline and internal CSS.
-  - Create a **new general** CSS file in `/Styles` folder.
-  - Link this CSS file in HTML.
+  - Create a **new general** `general.css` file in `/Styles` folder.
+  - Link this CSS file in every HTML file.
  - **Reset Default Styles in general CSS**
    - Resetting default margins and paddings for common elements to ensure consistency and set default font for text:
     ```css
@@ -35,8 +35,9 @@
 - Set [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) to justify.
 - Set [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) to 1.8.
 
+
 ## 3. About Us CSS File
-- Add a new CSS file for the **"About Us"** page.
+- Add a new CSS file with name `about.css` for the **"About Us"** page.
 - [Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) the **"About Us"** CSS file with HTML file.
 
 ## 4. Style for ID Selector "About"
@@ -48,7 +49,7 @@
 
 ## 5. [Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model) for ID Selector "About"
 - Add a red [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border) around whole section.
-- Margin: Center the section; 
+- Margin: Center the section 
   - `margin-top` and `margin-bottom` to 20px.
   -  `margin-left` and `margin-right` to auto.
   -  [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) to 16px.
@@ -66,8 +67,8 @@
 - Create a HTML `<div>` for each team member 
   - **Team member** consists of **image**, **name** and **description**
 - Assign [`class="team-member"`](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) to each `<div>`.
-- In "About Us" CSS, set [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin), [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border), [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius), and [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color).
-- Set [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) to 20vw and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) to auto.
+- In `about.css` CSS, set [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin), [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border), [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius), and [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) in `team-member` class.
+- Set [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) to 20vw and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) to auto in `team-member`.
 
 ### 7.2 Team Member Container
 - Create a new `<div>` under **"Meet Our Team"** `<h3>` which will contain all team member **divs**.
