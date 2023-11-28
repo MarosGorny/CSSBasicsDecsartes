@@ -1,6 +1,5 @@
 /* Main container for the about section */
 #about {
-    background-color: #f8f8f8; /* Sets a light gray background color for contrast */
     padding: 40px; /* Adds padding around the content for spacing */
     margin: 20px auto; /* Centers the block horizontally with a margin on top and bottom */
     max-width: 85vw; /* Limits the width to 85% of the viewport width for readability */
