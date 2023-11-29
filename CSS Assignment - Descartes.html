@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Assignment.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="css-workshop-outline">CSS Workshop Outline</h1>
+<p>By Maros Gorny, and Martin Macko</p>
+<ul>
+<li>mgorny@descartes.com
+<ul>
+<li><a href="https://www.linkedin.com/in/marosgorny/">[LinkedIn Profile]</a></li>
+</ul>
+</li>
+<li>mmacko@descartes.com</li>
+</ul>
+<h2 id="1-implementing-css">1. Implementing CSS</h2>
+<ul>
+<li>
+<p><strong><a href="https://www.w3schools.com/css/css_howto.asp">Inline</a> CSS</strong></p>
+<ul>
+<li>Change text <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"><code>color</code></a> for <code>&lt;h1&gt;</code> with inline CSS.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.w3schools.com/css/css_howto.asp">Internal</a> CSS</strong></p>
+<ul>
+<li>Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> for <code>&lt;h1&gt;</code> with internal CSS.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">External</a> CSS File</strong></p>
+<ul>
+<li>Remove inline and internal CSS.</li>
+<li>Create a <strong>new general</strong> <code>general.css</code> file in <code>/Styles</code> folder.</li>
+<li>Link this CSS file in every HTML file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reset Default Styles in general CSS</strong></p>
+<ul>
+<li>Resetting default margins and paddings for common elements to ensure consistency and set default font for text:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">body</span>, <span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span>, <span class="hljs-selector-tag">h3</span>, <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">ul</span>, <span class="hljs-selector-tag">li</span>, <span class="hljs-selector-tag">nav</span>, <span class="hljs-selector-tag">section</span>, <span class="hljs-selector-tag">article</span>, <span class="hljs-selector-tag">footer</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">body</span> {
+   <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Arial'</span>, sans-serif; <span class="hljs-comment">/* Sets the font across the whole page */</span>
+   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F5F8FA</span>; <span class="hljs-comment">/* Sets the default background color */</span>
+}
+</div></code></pre>
+</li>
+</ul>
+<h2 id="2-styling-elements">2. Styling Elements</h2>
+<h3 id="21-edit-h2">2.1 Edit <code>&lt;h2&gt;</code></h3>
+<ul>
+<li>Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"><code>color</code></a> to blue (<code>#134169</code>).</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> to 600.</li>
+<li>Add <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom"><code>border-bottom: 2px solid #1f8dc8</code></a>.</li>
+</ul>
+<h3 id="22-edit-paragraph">2.2 Edit Paragraph</h3>
+<ul>
+<li>Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"><code>color</code></a> to <code>#555</code>.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"><code>text-align</code></a> to justify.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"><code>line-height</code></a> to 1.8.</li>
+</ul>
+<h2 id="3-about-us-css-file">3. About Us CSS File</h2>
+<ul>
+<li>Add a new CSS file with name <code>about.css</code> for the <strong>&quot;About Us&quot;</strong> page.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">Link</a> the <strong>&quot;About Us&quot;</strong> CSS file with HTML file.</li>
+</ul>
+<h2 id="4-style-for-id-selector-%22about%22">4. Style for ID Selector &quot;About&quot;</h2>
+<ul>
+<li>Add <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors#examples"><code>id=&quot;about&quot;</code></a> value to the <strong>first</strong> <code>&lt;section&gt;</code> element in <strong>&quot;About Us&quot;</strong> HTML.</li>
+<li>Create &quot;About&quot; ID selector in the <strong>&quot;About Us&quot;</strong> CSS file.
+<ul>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width"><code>max-width</code></a> of the section to 85vw.</li>
+<li>Optional: Change <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> to 110%.</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-box-model-for-id-selector-%22about%22">5. <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model">Box Model</a> for ID Selector &quot;About&quot;</h2>
+<ul>
+<li>Add a red <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"><code>border</code></a> around whole section.</li>
+<li>Margin: Center the section
+<ul>
+<li><code>margin-top</code> and <code>margin-bottom</code> to 20px.</li>
+<li><code>margin-left</code> and <code>margin-right</code> to auto.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><code>border-radius</code></a> to 16px.</li>
+<li>Optional: Use <strong>shorthand</strong> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><code>margin: 20px auto</code></a>.</li>
+</ul>
+</li>
+<li>Padding: Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><code>padding</code></a> to 40px for all sides of section.</li>
+<li><em>Remove the red border afterwards.</em></li>
+</ul>
+<h2 id="6-edit-h3-in-general-css">6. Edit <code>&lt;h3&gt;</code> in GENERAL CSS</h2>
+<ul>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"><code>color</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"><code>text-align</code></a>.</li>
+<li>Edit box model:
+<ul>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><code>margin</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><code>padding</code></a>, and a screen-wide <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom"><code>border-bottom</code></a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-team-member-divisions">7. Team Member Divisions</h2>
+<h3 id="71-individual-divisions">7.1 Individual Divisions</h3>
+<ul>
+<li>Create a HTML <code>&lt;div&gt;</code> for each team member
+<ul>
+<li><strong>Team member</strong> consists of <strong>image</strong>, <strong>name</strong> and <strong>description</strong></li>
+</ul>
+</li>
+<li>Assign <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors"><code>class=&quot;team-member&quot;</code></a> to each <code>&lt;div&gt;</code>.</li>
+<li>In <code>about.css</code> CSS, set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><code>margin</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><code>padding</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"><code>border</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><code>border-radius</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> in <code>team-member</code> class.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"><code>width</code></a> to 20vw and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height"><code>height</code></a> to auto in <code>team-member</code>.</li>
+</ul>
+<h3 id="72-team-member-container">7.2 Team Member Container</h3>
+<ul>
+<li>
+<p>Create a new <code>&lt;div&gt;</code> under <strong>&quot;Meet Our Team&quot;</strong> <code>&lt;h3&gt;</code> which will contain all team member <strong>divs</strong>.</p>
+</li>
+<li>
+<p>In HTML set an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ID selector</a> for this <code>&lt;div&gt;</code>  and add it to the <strong>&quot;About Us&quot;</strong> CSS file.</p>
+</li>
+<li>
+<p>Add these properties to newly created <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ID selector</a></p>
+<pre class="hljs"><code><div>  <span class="hljs-selector-tag">display</span>: <span class="hljs-selector-tag">flex</span>; <span class="hljs-comment">/* Enables flexbox layout */</span>
+  <span class="hljs-selector-tag">flex-wrap</span>: <span class="hljs-selector-tag">nowrap</span>; <span class="hljs-comment">/* Doesn't allows items to wrap to new lines*/</span>
+  <span class="hljs-selector-tag">justify-content</span>: <span class="hljs-selector-tag">space-around</span>; <span class="hljs-comment">/* Distributes space around items */</span>
+  <span class="hljs-selector-tag">align-items</span>: <span class="hljs-selector-tag">flex-start</span>; <span class="hljs-comment">/* Aligns items to the start of the flex container */</span>
+</div></code></pre>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code>display:  flex</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"><code>flex-wrap:  nowrap</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"><code>justify-content:  space-around</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"><code>align-items:  flex-start</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="8-style-for-team-member-images">8. Style for Team Member Images</h2>
+<ul>
+<li>Create a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator">descendant <em>(combinator)</em> selector</a> for <code>img</code> <em>(images)</em> under the <code>team-member</code> class.
+<ul>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"><code>width</code></a> to 100%, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height"><code>height</code></a> to auto.</li>
+<li>Optional: Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><code>border-radius</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><code>margin</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><code>padding</code></a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-footer-styling">9. Footer Styling</h2>
+<ul>
+<li>Create <code>&lt;footer&gt;</code> selector in the general CSS file.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"><code>position</code></a> to fixed.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/bottom"><code>bottom</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/left"><code>left</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/right"><code>right</code></a> to 0.</li>
+<li>Set <code>background-color</code> and text <code>color</code>.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height"><code>height</code></a> to an absolute value (e.g., in pixels).
+<ul>
+<li><em>Why it's overlapping with <code>&lt;body&gt;</code> content?</em></li>
+</ul>
+</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"><code>text-align</code></a> to center
+<ul>
+<li><em>What's the problem?</em></li>
+</ul>
+</li>
+<li>Optional: Add a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"><code>background-image</code></a> to the footer.</li>
+</ul>
+<h2 id="10-navigation-bar-optional-time-based">10. Navigation Bar (Optional, Time-Based) :</h2>
+<ul>
+<li>Similar to the footer, set position fixed.</li>
+<li>Remove style type.</li>
+<li>Set height, centering, and alignment.</li>
+<li>Optional: Set margin, font weight, color.</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">/* Styling for the navigation bar, including fixed positioning */</span>
+<span class="hljs-selector-tag">nav</span><span class="hljs-selector-id">#main-nav</span> {
+    <span class="hljs-attribute">position</span>: fixed; <span class="hljs-comment">/* The navigation bar is fixed to the top of the viewport */</span>
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>; <span class="hljs-comment">/* Aligns the navigation bar to the top */</span>
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>; <span class="hljs-comment">/* Aligns the navigation bar to the left */</span>
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>; <span class="hljs-comment">/* Aligns the navigation bar to the right */</span>
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">77.5px</span>; <span class="hljs-comment">/* Adds margin to the top of the navigation bar */</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>; <span class="hljs-comment">/* Sets the height of the navigation bar */</span>
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#134169</span>; <span class="hljs-comment">/* Background color of the navigation bar */</span>
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>; <span class="hljs-comment">/* Ensures the navigation bar stacks on top of other elements */</span>
+}
+
+<span class="hljs-comment">/* Styling for the list within the navigation bar */</span>
+<span class="hljs-selector-tag">nav</span><span class="hljs-selector-id">#main-nav</span> <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">list-style-type</span>: none; <span class="hljs-comment">/* Removes default list styling */</span>
+    <span class="hljs-attribute">display</span>: flex; <span class="hljs-comment">/* Uses flexbox for layout */</span>
+    <span class="hljs-attribute">justify-content</span>: center; <span class="hljs-comment">/* Centers items horizontally in the container */</span>
+    <span class="hljs-attribute">align-items</span>: center; <span class="hljs-comment">/* Centers items vertically in the container */</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>; <span class="hljs-comment">/* Sets the height to match the parent (nav) height */</span>
+}
+
+<span class="hljs-comment">/* Spacing for list items within the navigation */</span>
+<span class="hljs-selector-tag">nav</span><span class="hljs-selector-id">#main-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">10vw</span>; <span class="hljs-comment">/* Adds horizontal spacing between navigation items based on viewport width */</span>
+}
+
+<span class="hljs-comment">/* Styling for anchor tags within the navigation list items */</span>
+<span class="hljs-selector-tag">nav</span><span class="hljs-selector-id">#main-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">text-decoration</span>: none; <span class="hljs-comment">/* Removes underline from links */</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>; <span class="hljs-comment">/* Sets the text color for links */</span>
+    <span class="hljs-attribute">font-weight</span>: bold; <span class="hljs-comment">/* Makes the link text bold */</span>
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">15px</span>; <span class="hljs-comment">/* Adds padding to the links for clickable area */</span>
+    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.3s</span>; <span class="hljs-comment">/* Adds a transition for the background color on hover */</span>
+    <span class="hljs-attribute">text-transform</span>: uppercase; <span class="hljs-comment">/* Transforms all text to uppercase for styling */</span>
+}
+
+<span class="hljs-comment">/* Adds underline on hover for navigation links */</span>
+<span class="hljs-selector-tag">nav</span><span class="hljs-selector-id">#main-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">text-decoration</span>: underline; <span class="hljs-comment">/* Underlines link text on hover */</span>
+}
+</div></code></pre>
+<h2 id="11-adding-pricecontact-table">11. Adding Price/Contact Table</h2>
+<h3 id="111-contact-prices-css-file">11.1 Contact-Prices CSS File</h3>
+<ul>
+<li>Create a new CSS file <em>(<code>/Styles</code> folder)</em> for contact-prices HTML file.</li>
+<li>Create a new <code>&lt;div&gt;</code> around the <code>&lt;table&gt;</code> in contact-prices HTML file and assign a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors"><code>class=&quot;price-table&quot;</code></a>selector to that <code>&lt;div&gt;</code>.</li>
+</ul>
+<h3 id="112-table-styling">11.2 Table Styling</h3>
+<ul>
+<li>Create a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator">descendant <em>(combinator)</em> selector</a>  for the <code>&lt;table&gt;</code> under <code>price-table</code> class.</li>
+<li>Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"><code>width</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse"><code>border-collapse</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"><code>margin</code></a> for that descendant selector.</li>
+</ul>
+<h3 id="113-table-headers-and-cells-styling">11.3 Table Headers and Cells Styling</h3>
+<ul>
+<li>Create a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator">descendant <em>(combinator)</em> selectors</a>   for table headers (<code>&lt;th&gt;</code>) and also for data cells (<code>&lt;td&gt;</code>) under the <code>price-table</code> class.</li>
+<li>Set solid <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"><code>border</code></a>.</li>
+<li>Optional: Set <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"><code>text-align</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"><code>vertical-align</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"><code>padding</code></a>.</li>
+</ul>
+<h3 id="114-optional-styles">11.4 Optional Styles</h3>
+<ul>
+<li>Differentiate styles for header cells and data cells (e.g., <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"><code>background-color</code></a>).</li>
+</ul>
+<h2 id="colors">Colors</h2>
+<p>#about</p>
+<ul>
+<li><code>background-color: #f8f8f8;</code></li>
+</ul>
+<p>.team-member:</p>
+<ul>
+<li><code>border: 1px  solid  #ddd;</code></li>
+<li><code>background-color: #fff;</code></li>
+</ul>
+<hr>
+<p>body:</p>
+<ul>
+<li><code>background-color: #F5F8FA;</code></li>
+</ul>
+<p>h2:</p>
+<ul>
+<li><code>color: #134169;</code></li>
+</ul>
+<p>h3:</p>
+<ul>
+<li><code>color: #134169;</code></li>
+</ul>
+<p>section p:</p>
+<ul>
+<li><code>color: #555</code></li>
+</ul>
+<p>header:</p>
+<ul>
+<li><code>background-color: #050318;</code></li>
+<li><code>color: #007DC0;</code></li>
+</ul>
+<p>footer:</p>
+<ul>
+<li><code>background-color: #000</code></li>
+<li><code>color: #fff</code></li>
+</ul>
+<p>nav#main-nav:</p>
+<ul>
+<li><code>background-color: #134169;</code></li>
+</ul>
+<p>nav#main-nav  ul  li  a:</p>
+<ul>
+<li><code>color: #fff;</code></li>
+</ul>
+<hr>
+<p>.price-table th:</p>
+<ul>
+<li><code>background-color: #134169;</code></li>
+</ul>
+<p>.price-table td:</p>
+<ul>
+<li><code>background-color: #fff;</code></li>
+</ul>
+
+</body>
+</html>
