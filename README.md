@@ -1,5 +1,9 @@
 
 # CSS Workshop Outline
+By Maros Gorny, and Martin Macko
+- mgorny@descartes.com
+   - [[LinkedIn Profile]](https://www.linkedin.com/in/marosgorny/)
+- mmacko@descartes.com
 
 ## 1. Implementing CSS
 - **[Inline](https://www.w3schools.com/css/css_howto.asp) CSS**
@@ -21,6 +25,7 @@
 
     body {
        font-family: 'Arial', sans-serif; /* Sets the font across the whole page */
+       background-color: #F5F8FA; /* Sets the default background color */
     }
     ```
 
@@ -43,7 +48,6 @@
 ## 4. Style for ID Selector "About"
 - Add [`id="about"`](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors#examples) value to the **first** `<section>` element in **"About Us"** HTML.
 - Create "About" ID selector in the **"About Us"** CSS file.
-  - Change [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) (recommend LightGrey).
   - Set [`max-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) of the section to 85vw.
   - Optional: Change [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) to 110%.
 
@@ -102,11 +106,53 @@
   - *What's the problem?*  
 - Optional: Add a [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) to the footer.
 
-## 10. Navigation Bar (Optional, Time-Based) TODO:
+## 10. Navigation Bar (Optional, Time-Based) :
 - Similar to the footer, set position fixed.
 - Remove style type.
 - Set height, centering, and alignment.
 - Optional: Set margin, font weight, color.
+```css
+/* Styling for the navigation bar, including fixed positioning */
+nav#main-nav {
+    position: fixed; /* The navigation bar is fixed to the top of the viewport */
+    top: 0; /* Aligns the navigation bar to the top */
+    left: 0; /* Aligns the navigation bar to the left */
+    right: 0; /* Aligns the navigation bar to the right */
+    margin-top: 77.5px; /* Adds margin to the top of the navigation bar */
+    height: 30px; /* Sets the height of the navigation bar */
+    background-color: #134169; /* Background color of the navigation bar */
+    z-index: 1000; /* Ensures the navigation bar stacks on top of other elements */
+}
+
+/* Styling for the list within the navigation bar */
+nav#main-nav ul {
+    list-style-type: none; /* Removes default list styling */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers items horizontally in the container */
+    align-items: center; /* Centers items vertically in the container */
+    height: 100%; /* Sets the height to match the parent (nav) height */
+}
+
+/* Spacing for list items within the navigation */
+nav#main-nav ul li {
+    margin: 0 10vw; /* Adds horizontal spacing between navigation items based on viewport width */
+}
+
+/* Styling for anchor tags within the navigation list items */
+nav#main-nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #fff; /* Sets the text color for links */
+    font-weight: bold; /* Makes the link text bold */
+    padding: 10px 15px; /* Adds padding to the links for clickable area */
+    transition: background-color 0.3s; /* Adds a transition for the background color on hover */
+    text-transform: uppercase; /* Transforms all text to uppercase for styling */
+}
+
+/* Adds underline on hover for navigation links */
+nav#main-nav ul li a:hover {
+    text-decoration: underline; /* Underlines link text on hover */
+}
+```
 
 ## 11. Adding Price/Contact Table
 ### 11.1 Contact-Prices CSS File
@@ -124,3 +170,45 @@
 
 ### 11.4 Optional Styles
 - Differentiate styles for header cells and data cells (e.g., [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)).
+
+## Colors
+#about 
+- `background-color: #f8f8f8;`
+
+.team-member:
+- `border: 1px  solid  #ddd;`
+- `background-color: #fff;`
+---
+body:
+- `background-color: #F5F8FA;`
+
+h2:
+- `color: #134169;`
+
+h3:
+- `color: #134169;`
+
+section p:
+- `color: #555`
+
+header: 
+- `background-color: #050318;`
+- `color: #007DC0;`
+
+footer:
+- `background-color: #000`
+- `color: #fff`
+
+nav#main-nav:
+- `background-color: #134169;`
+
+nav#main-nav  ul  li  a:
+- `color: #fff;`
+
+---
+.price-table th:
+- `background-color: #134169;`
+
+.price-table td:
+- `background-color: #fff;`
+
